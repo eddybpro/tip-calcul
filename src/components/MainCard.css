@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --color-brand-1: hsl(172, 67%, 45%);
+  --color-brand-2: hsl(186, 14%, 43%);
+
+  --color-site-1: hsl(185, 41%, 84%);
+  --color-site-2: hsl(0, 0%, 100%);
+  --color-site-3: hsl(183, 100%, 15%);
+  --color-site-4: hsl(184, 14%, 56%);
+  --color-site-5: hsl(189, 41%, 97%);
+
+  --font-space-mono: "Space Mono", monospace;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-space-mono);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  background-color: var(--color-site-2);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+label {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  display: block;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+label > img {
+  position: absolute;
+  top: 55%;
+  left: 2rem;
+  width: 1.5rem;
+}
+
+input {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-site-5);
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  width: 100%;
+  color: var(--color-site-3);
+}
+
+input::placeholder {
+  color: var(--color-site-3);
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+fieldset > legend {
+  font-size: 1.6rem;
+  text-align: left;
+  color: var(--color-brand-2);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  background-color: transparent !important;
+}
+
+fieldset > button {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-site-3);
+  color: var(--color-site-2);
+  border-radius: 0.5rem;
+}
+
+fieldset > input {
+  display: block;
+  width: auto;
+  background-color: var(--color-site-5) !important;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 80rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
