@@ -19,8 +19,10 @@ function MainCard() {
     buttonRef.current.style.opacity = "1";
     document.querySelectorAll(".TipBtn").forEach((el) => {
       el.style.backgroundColor = "hsl(183, 100%, 15%)";
+      el.style.color = "hsl(0, 0%, 100%)";
     });
     e.target.style.backgroundColor = "hsl(172, 67%, 45%)";
+    e.target.style.color = "hsl(183, 100%, 15%)";
   };
 
   const handleChange = (e) => {
